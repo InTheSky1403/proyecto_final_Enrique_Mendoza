@@ -1,5 +1,21 @@
-# proyecto_final_Enrique_Mendoza
+# proyecto\_final\_Enrique\_Mendoza
+
 Proyecto final del bootcamp
 
 El presente documento define el alcance de las pruebas para la plataforma OrangeHRM, detallando los tipos y niveles de pruebas aplicables, entorno, herramientas y datos de prueba, criterios de entrada y de salida, riesgos y supuestos y roles y responsabilidades requeridos para el cierre del ciclo. Su propósito es servir como el documento base para el diseño del entregable del Módulo 1.
-https://github.com/InTheSky1403/proyecto_final_Enrique_Mendoza/blob/main/docs/QA-EMP-001_Alcance-de-calidad_OrangeHRM_Enrique%20Mendoza_v1.0.docx
+https://github.com/InTheSky1403/proyecto\_final\_Enrique\_Mendoza/blob/main/docs/QA-EMP-001\_Alcance-de-calidad\_OrangeHRM\_Enrique%20Mendoza\_v1.0.docx
+
+Además de ello contiene un set de pruebas como entregable del Módulo 2:
+
+**Login**
+
+* Inicio de sesión exitoso.
+* Usuario inválido.
+* Contraseña inválida.
+
+**Registro de Empleado**
+
+* Agregar un empleado correctamente.
+* Nombre con más de 30 caracteres.
+* Nombre con valor nulo.
+
