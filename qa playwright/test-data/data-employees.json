@@ -1,0 +1,5 @@
+[
+  { "id": "EMP-01", "firstName": "Juan", "lastName": "Pérez" },
+  { "id": "EMP-02", "firstName": "María", "lastName": "Gómez" },
+  { "id": "EMP-03", "firstName": "Carlos", "lastName": "Ruiz" }
+]
