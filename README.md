@@ -19,6 +19,3 @@ Además de ello contiene un set de pruebas como entregable del Módulo 2:
 * EMP005 - Nombre con más de 30 caracteres
 * EMP006 - Nombre con valor nulo
 
-**Registro de Usuario y Reclamo**
-* EMP007 - Registrar usuario y crear reclamo
-
