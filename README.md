@@ -9,13 +9,16 @@ Además de ello contiene un set de pruebas como entregable del Módulo 2:
 
 **Login**
 
-* Inicio de sesión exitoso.
-* Usuario inválido.
-* Contraseña inválida.
+* EMP001 - Inicio de sesión exitoso
+* EMP002 - usuario inválido
+* EMP003 - contraseña inválida
 
 **Registro de Empleado**
 
-* Agregar un empleado correctamente.
-* Nombre con más de 30 caracteres.
-* Nombre con valor nulo.
+* EMP004 - Registrar empleado exitosamente
+* EMP005 - Nombre con más de 30 caracteres
+* EMP006 - Nombre con valor nulo
+
+**Registro de Usuario y Reclamo**
+* EMP007 - Registrar usuario y crear reclamo
 
