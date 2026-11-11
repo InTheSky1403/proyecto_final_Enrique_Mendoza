@@ -1,5 +1,32 @@
 [
-  { "id": "EMP-01", "firstName": "Juan", "lastName": "Pérez" },
-  { "id": "EMP-02", "firstName": "María", "lastName": "Gómez" },
-  { "id": "EMP-03", "firstName": "Carlos", "lastName": "Ruiz" }
+  { 
+    "id": "EMP004", 
+    "firstName": "Salvador", 
+    "lastName": "Guevara", 
+    "employeeId": "239251", 
+    "username": "Salvador.Guevara",
+    "claimEvent": "Travel Allowance",
+    "claimCurrency": "Peruvian Nuevo Sol",
+    "claimDescription": "Reembolso por viaje de trabajo"
+  },
+  { 
+    "id": "EMPP005", 
+    "firstName": "Carmencita", 
+    "lastName": "Lara", 
+    "employeeId": "022351", 
+    "username": "Carmencita.Lara",
+    "claimEvent": "Medical Reimbursement",
+    "claimCurrency": "Peruvian Nuevo Sol",
+    "claimDescription": "Gastos médicos de emergencia"
+  },
+  { 
+    "id": "EMP006", 
+    "firstName": "Francisco", 
+    "lastName": "Lara", 
+    "employeeId": "0125451", 
+    "username": "Francisco.Lara",
+    "claimEvent": "Travel Allowance",
+    "claimCurrency": "Peruvian Nuevo Sol",
+    "claimDescription": "Viáticos de traslado"
+  }
 ]

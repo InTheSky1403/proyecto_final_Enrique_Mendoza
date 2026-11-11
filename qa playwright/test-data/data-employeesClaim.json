@@ -1,0 +1,12 @@
+[
+  { 
+    "id": "EMP007", 
+    "firstName": "Flor", 
+    "lastName": "Margarita", 
+    "employeeId": "11111388", 
+    "username": "Flor.Margarita",
+    "claimEvent": "Travel Allowance",
+    "claimCurrency": "Peruvian Nuevo Sol",
+    "claimDescription": "Reembolso por viaje de trabajo" 
+  }
+]
