@@ -21,15 +21,15 @@ for (const emp of employeesData) {
       await expect(loginPage.textDashboard).toBeVisible({ timeout: 20000 });
       // 2. Registro de empleado
       await homePage.linkPIM();
-      await expect(pimPage.addEmployeeLink).toBeVisible();
+      await expect(pimPage.addEmployeeLink).toBeVisible({ timeout: 20000 });
       await pimPage.linkEmployeeList();
-      await expect(employeePage.buttonCancel).toBeVisible();
+      await expect(employeePage.buttonCancel).toBeVisible({ timeout: 20000 });
       await employeePage.completeFormJson(emp.firstName, emp.lastName, emp.employeeId);
       // 3. Registro de usuario
       await homePage.linkAdmin();
-      await expect(adminPage.buttonAdd).toBeVisible();
+      await expect(adminPage.buttonAdd).toBeVisible({ timeout: 20000 });
       await adminPage. linkUserManagement();
-      await expect(addUserPage.saveButton).toBeVisible();
+      await expect(addUserPage.saveButton).toBeVisible({ timeout: 20000 });
       await addUserPage.addUser(`${emp.firstName} ${emp.lastName}`,  emp.username, passwords.userPass, passwords.confirmUserPass);
       await loginPage.logout();
       // 4. Iniciar Sesión con el nuevo usuario

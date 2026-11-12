@@ -13,7 +13,9 @@ export class SubmitClaimPage {
     //método para ingresar una reclamación
     async selectEventOption(optionText) {
         await this.selectEvent.click();
-        await this.getOptionByText(optionText).click();
+        const option = this.getOptionByText(optionText);
+        await option.waitFor({ state: 'visible', timeout: 10000 });
+        await option.click();
     }
     async selectCurrencyOption(currencyText) {
         await this.selectCurrency.click();
