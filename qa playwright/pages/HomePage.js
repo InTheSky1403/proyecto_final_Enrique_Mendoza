@@ -6,6 +6,7 @@ export class HomePage {
     this.adminLink = page.getByRole('link', { name: /(Admin|Administración)/i })
     this.claimLink = page.getByRole('link', { name: /(Claim|Afirmar)/i })
     this.submitClaimLink = page.getByRole('link', { name: /(Submit Claim|Presentar reclamación)/i });
+    this.dashboardLink = page.getByRole('link', { name: 'Dashboard' });
    }   
   
    //método para ingresar a PIM
@@ -26,5 +27,10 @@ export class HomePage {
    //método para ingresar a Submit Claim
    async linkSubmitClaim() {
     await this.submitClaimLink.click();
+
+    //método para ingresar a dashboard
+   }
+   async linkDashboard() {
+  await this.dashboardLink.click();
    }
 } 

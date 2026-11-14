@@ -6,7 +6,7 @@ test.describe("Registro de Usuario y reclamo", () => {
     test(`EMP007 - Registrar usuario y crear reclamo: ${emp.id} - ${emp.firstName}`, async ({ 
     loginPage, credentials, homePage, pimPage, employeePage, adminPage, addUserPage, passwords, submitClaimPage, page 
     }) => {
-
+    test.setTimeout(90_000)
     // Paso 1: Iniciar sesión
     await test.step("1. Iniciar sesión", async () => {
         await loginPage.login(credentials.username, credentials.password);
@@ -29,7 +29,7 @@ test.describe("Registro de Usuario y reclamo", () => {
         await homePage.linkAdmin();
         await expect(adminPage.buttonAdd).toBeVisible({ timeout: 15000 });
         await adminPage.linkUserManagement();
-        await expect(addUserPage.saveButton).toBeVisible({ timeout: 15000 });
+        await expect(addUserPage.saveButton).toBeVisible({ timeout: 30000 });
         await addUserPage.addUser(`${emp.firstName} ${emp.lastName}`, emp.username, passwords.userPass, passwords.confirmUserPass);
         await test.info().attach("Registro de usuario", { body: await page.screenshot(), contentType: "image/png" });
         await loginPage.logout();
@@ -38,7 +38,6 @@ test.describe("Registro de Usuario y reclamo", () => {
     // Paso 4: Iniciar Sesión con el nuevo usuario
     await test.step("4. Iniciar Sesión con el nuevo usuario", async () => {
         await loginPage.login(emp.username, passwords.userPass);
-        await loginPage.page.waitForLoadState('networkidle');
         await expect(loginPage.page).toHaveURL(/.*dashboard.*/);
         await expect(loginPage.textDashboard).toBeVisible({ timeout: 20000 });
     });

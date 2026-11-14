@@ -8,3 +8,8 @@ node_modules/
 /playwright/.auth/
 .env
 Prueba/
+results.json
+reportes/
+allure-results/
+allure-report/
+allure-history.jsonl

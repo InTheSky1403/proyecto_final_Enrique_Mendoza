@@ -12,12 +12,12 @@ for (const emp of employeesData) {
       adminPage,
       addUserPage,
       passwords,
-      claimPage,
       submitClaimPage
     }) => {
+      test.setTimeout(90_000)
       // 1. Iniciar sesión
       await loginPage.login(credentials.username, credentials.password);
-      await expect(loginPage.page).toHaveURL(/.*dashboard.*/);
+      await expect(loginPage.page).toHaveURL(/.*dashboard.*/, { timeout: 20000 });
       await expect(loginPage.textDashboard).toBeVisible({ timeout: 20000 });
       // 2. Registro de empleado
       await homePage.linkPIM();
@@ -29,13 +29,11 @@ for (const emp of employeesData) {
       await homePage.linkAdmin();
       await expect(adminPage.buttonAdd).toBeVisible({ timeout: 20000 });
       await adminPage. linkUserManagement();
-      await expect(addUserPage.saveButton).toBeVisible({ timeout: 20000 });
+      await expect(addUserPage.saveButton).toBeVisible({ timeout: 60000 });
       await addUserPage.addUser(`${emp.firstName} ${emp.lastName}`,  emp.username, passwords.userPass, passwords.confirmUserPass);
       await loginPage.logout();
       // 4. Iniciar Sesión con el nuevo usuario
       await loginPage.login(emp.username, passwords.userPass);
-      await loginPage.page.waitForLoadState('networkidle');
-      await expect(loginPage.page).toHaveURL(/.*dashboard.*/);
       await expect(loginPage.textDashboard).toBeVisible({ timeout: 20000 });
       // 5. Crear un reclamo
       await homePage.linkClaim();

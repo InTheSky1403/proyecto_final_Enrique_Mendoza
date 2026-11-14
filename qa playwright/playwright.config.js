@@ -28,6 +28,7 @@ export default defineConfig({
     ["list"], // una línea por prueba en la terminal
     ["html", { outputFolder: "playwright-report", open: "never" }], // reporte web; open:"never" evita que se abra solo
     ["json", { outputFile: "results.json" }], // mismos resultados en JSON (para revisarlos con código)
+    ["allure-playwright", { resultsDir: "allure-results" }],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
